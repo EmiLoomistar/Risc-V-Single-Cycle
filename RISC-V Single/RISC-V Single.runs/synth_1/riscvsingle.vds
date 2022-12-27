@@ -1,0 +1,303 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec 26 18:09:04 2022
+# Process ID: 18680
+# Current directory: E:/EmiOS/School/RISC-V Single/RISC-V Single.runs/synth_1
+# Command line: vivado.exe -log riscvsingle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source riscvsingle.tcl
+# Log file: E:/EmiOS/School/RISC-V Single/RISC-V Single.runs/synth_1/riscvsingle.vds
+# Journal file: E:/EmiOS/School/RISC-V Single/RISC-V Single.runs/synth_1\vivado.jou
+# Running On: DESKTOP-OGBG8A9, OS: Windows, CPU Frequency: 3912 MHz, CPU Physical cores: 2, Host memory: 8526 MB
+#-----------------------------------------------------------
+source riscvsingle.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 380.707 ; gain = 66.445
+Command: read_checkpoint -auto_incremental -incremental {E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/utils_1/imports/synth_1/riscvsingle.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/utils_1/imports/synth_1/riscvsingle.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top riscvsingle -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19480
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Programas/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 822.266 ; gain = 410.613
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10729] formal port 'jump' of mode 'out' cannot be associated with actual port 'jump' of mode 'buffer' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/controller.vhd:42]
+WARNING: [Synth 8-10729] formal port 'q' of mode 'out' cannot be associated with actual port 'pc' of mode 'buffer' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:70]
+WARNING: [Synth 8-10729] formal port 'rd2' of mode 'out' cannot be associated with actual port 'writedata' of mode 'buffer' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'riscvsingle' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/riscvsingle.vhd:37]
+INFO: [Synth 8-3491] module 'controller' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/controller.vhd:4' bound to instance 'c' of component 'controller' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/riscvsingle.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'controller' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/controller.vhd:17]
+INFO: [Synth 8-3491] module 'maindec' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/maindec.vhd:4' bound to instance 'md' of component 'maindec' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/controller.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'maindec' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/maindec.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'maindec' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/maindec.vhd:14]
+INFO: [Synth 8-3491] module 'aludec' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/aludec.vhd:4' bound to instance 'ad' of component 'aludec' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/controller.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'aludec' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/aludec.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'aludec' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/aludec.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'controller' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/controller.vhd:17]
+INFO: [Synth 8-3491] module 'datapath' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:5' bound to instance 'dp' of component 'datapath' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/riscvsingle.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'datapath' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:19]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'flopr' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/flopr.vhd:5' bound to instance 'pcreg' of component 'flopr' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'flopr' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/flopr.vhd:12]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'flopr' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/flopr.vhd:12]
+INFO: [Synth 8-3491] module 'adder' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/adder.vhd:5' bound to instance 'pcadd4' of component 'adder' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'adder' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/adder.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'adder' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/adder.vhd:10]
+INFO: [Synth 8-3491] module 'adder' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/adder.vhd:5' bound to instance 'pcaddbranch' of component 'adder' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:72]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux2' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux2.vhd:4' bound to instance 'pcmux' of component 'mux2' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'mux2' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux2.vhd:11]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux2.vhd:11]
+INFO: [Synth 8-3491] module 'regfile' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/regfile.vhd:5' bound to instance 'rf' of component 'regfile' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'regfile' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/regfile.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'regfile' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/regfile.vhd:13]
+INFO: [Synth 8-3491] module 'extend' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/extend.vhd:4' bound to instance 'ext' of component 'extend' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'extend' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/extend.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'extend' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/extend.vhd:10]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux2' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux2.vhd:4' bound to instance 'srcbmux' of component 'mux2' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:83]
+INFO: [Synth 8-3491] module 'alu' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/alu.vhd:5' bound to instance 'mainalu' of component 'alu' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'alu' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/alu.vhd:12]
+WARNING: [Synth 8-614] signal 'a' is read in the process but is not in the sensitivity list [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/alu.vhd:17]
+WARNING: [Synth 8-614] signal 'b' is read in the process but is not in the sensitivity list [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/alu.vhd:17]
+WARNING: [Synth 8-614] signal 'slt_result' is read in the process but is not in the sensitivity list [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/alu.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'alu' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/alu.vhd:12]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux3' declared at 'E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux3.vhd:4' bound to instance 'resultmux' of component 'mux3' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'mux3' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux3.vhd:11]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux3' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux3.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/datapath.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'riscvsingle' (0#1) [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/riscvsingle.vhd:37]
+WARNING: [Synth 8-7129] Port Instr[6] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[5] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[4] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[3] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[2] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[1] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Instr[0] in module datapath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 912.664 ; gain = 501.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 912.664 ; gain = 501.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 912.664 ; gain = 501.012
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [E:/EmiOS/School/RISC-V Single/RISC-V Single.srcs/sources_1/new/mux3.vhd:14]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 912.664 ; gain = 501.012
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------+-----------+----------------------+--------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives   | 
++------------+---------------+-----------+----------------------+--------------+
+|riscvsingle | dp/rf/mem_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+---------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+---------------+-----------+----------------------+--------------+
+|Module Name | RTL Object    | Inference | Size (Depth x Width) | Primitives   | 
++------------+---------------+-----------+----------------------+--------------+
+|riscvsingle | dp/rf/mem_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+---------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    36|
+|3     |LUT1     |     3|
+|4     |LUT2     |    20|
+|5     |LUT3     |     5|
+|6     |LUT4     |    34|
+|7     |LUT5     |    25|
+|8     |LUT6     |   226|
+|9     |RAM32M   |    10|
+|10    |RAM32X1D |     4|
+|11    |FDCE     |    32|
+|12    |LD       |    32|
+|13    |IBUF     |    64|
+|14    |OBUF     |    97|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------+---------+------+
+|      |Instance        |Module   |Cells |
++------+----------------+---------+------+
+|1     |top             |         |   590|
+|2     |  dp            |datapath |   425|
+|3     |    mainalu     |alu      |    21|
+|4     |    pcadd4      |adder    |     8|
+|5     |    pcaddbranch |adder_0  |     9|
+|6     |    pcreg       |flopr    |    67|
+|7     |    resultmux   |mux3     |    32|
+|8     |    rf          |regfile  |   288|
++------+----------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1145.770 ; gain = 734.117
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1155.609 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1243.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 46 instances were transformed.
+  LD => LDCE: 32 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: 4b277a61
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1243.852 ; gain = 839.305
+INFO: [Common 17-1381] The checkpoint 'E:/EmiOS/School/RISC-V Single/RISC-V Single.runs/synth_1/riscvsingle.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file riscvsingle_utilization_synth.rpt -pb riscvsingle_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 26 18:09:39 2022...
